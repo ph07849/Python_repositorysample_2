@@ -1,0 +1,10 @@
+[run]
+command_line= -m pytest -m "not templates"
+omit =
+#omit any distribution-packages 
+    */dist-packages/*
+    */package/__main__.py
+    */package/__init__.py
+[report]
+include =
+*state/packages-in-use*

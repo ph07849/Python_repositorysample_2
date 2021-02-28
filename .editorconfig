@@ -1,0 +1,32 @@
+# EditorConfig information: https://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+#Set Charset for Javascript and Python 
+ [*.{js,py}]
+charset = utf-8
+
+#  Set Indent Style for Python, Json and YAML 
+[*.{yml,py,json} ]
+indent_style = space
+indent_size = 4
+
+#  Set Indent Style for YANG 
+[*.yang ]
+indent_style = space
+indent_size = 2
+
+#  Set Indent Style for XML 
+[*.xml ]
+indent_style = space
+indent_size = 2
+
+# Set indent style fo Makefile 
+[Makefile]
+indent_style = tab
