@@ -1,3 +1,4 @@
+from mathematician import Sub
 
 #This is a code for calculating all the basic Math operations
 #Here we are creating a Main class or Blueprint for calculating code
@@ -6,25 +7,38 @@
 class cal():
 #This is a constructor function that gives a prerequisites for this class the basic input of two numbers
     def __init__(self,a,b) :
+        # The below is checking the Type error for the math operation
+        if not isinstance(a, int):
+            raise TypeError("a is not a integer")
+        if not isinstance(b, int):
+            raise TypeError("b is not a integer")
+        # This is a value error valid only for multiplication and division -need to doublecheck
+
         self.a=a
         self.b=b
-# The below are separate functions of adding , subtracting , Multiplication and division
+
+    def __checktest(self):
+        if self.a == 0 or self.b == 0:
+            raise ValueError("Multiplication and division will be invalid,please enter some other number")
+
+    # The below are separate functions of adding , subtracting , Multiplication and division
+
     def add(self):
         return self.a+self.b
+
     def mul(self):
+        self.__checktest()
         return self.a*self.b
+
     def div(self):
+        self.__checktest()
         return self.a/self.b
+
     def sub(self):
         return self.a-self.b
-# The below is checking the Type error for the math operation
-        if not isinstance(a,int):
-            raise TypeError("a is not a integer")
-        if not isinstance(b,int):
-            raise TypeError("b is not a integer")
-# This is a value error valid only for multiplication and division -need to doublecheck
-        if not isinstance(a==0,b==0):
-            raise ValueError("Multiplication and division will be invalid,please enter some other number")
+
+
+
 a=int(input("Enter first number: "))
 b=int(input("Enter second number: "))
 Answer=cal(a,b)
